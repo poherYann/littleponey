@@ -1,0 +1,11 @@
+<a routerLink="/ponies" href="">Poneys</a>
+<br>
+<a routerLink="/races" href="">Courses</a>
+<br>
+<a routerLink="/add-pony" href="">Ajouter un poney</a>
+
+<form (ngSubmit)="onSubmit()" action="">
+  <input type="text" name="user" [(ngModel)]="username" [hidden]="!askCon">
+  <button *ngIf="askCon" type="submit">OK</button>
+  <button *ngIf="askCon == false" type="submit">OUT</button>
+</form>
